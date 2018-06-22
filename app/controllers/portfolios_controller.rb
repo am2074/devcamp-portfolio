@@ -1,7 +1,11 @@
 class PortfoliosController < ApplicationController
 	def index
-		@portfolio_items = Portfolio.all #MVC Portfolio.all is calling the model inside the controller
+		@portfolio_items = Portfolio.all#MVC Portfolio.all is calling the model inside the controller
 	end
+
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
 
 	def new
 		@portfolio_item = Portfolio.new
